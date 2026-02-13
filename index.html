@@ -1,23 +1,50 @@
-@startuml
-actor Developer
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 홈페이지</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #4CAF50; color: white; padding: 20px; text-align: center; }
+        nav { background-color: #333; }
+        nav a { color: white; padding: 14px 20px; display: inline-block; text-decoration: none; }
+        nav a:hover { background-color: #ddd; color: black; }
+        section { padding: 20px; }
+        footer { background-color: #f1f1f1; text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
 
-node "Local Dev Environment" {
-  component "Next.js App"
-}
+<header>
+    <h1>환영합니다!</h1>
+    <p>나의 첫 번째 HTML 홈페이지</p>
+</header>
 
-node "GitHub Repository" {
-  component "Source Code"
-}
+<nav>
+    <a href="#home">홈</a>
+    <a href="#about">소개</a>
+    <a href="#contact">연락처</a>
+</nav>
 
-node "Vercel Platform" {
-  component "Build Server"
-  component "Edge Network CDN"
-}
+<section id="home">
+    <h2>홈</h2>
+    <p>여기는 홈페이지의 메인 페이지입니다.</p>
+</section>
 
-Developer --> "Next.js App" : Develop
-"Next.js App" --> "Source Code" : Push
-"Source Code" --> "Build Server" : Trigger CI
-"Build Server" --> "Edge Network CDN" : Deploy
-"Edge Network CDN" --> Visitor : Serve HTTPS
+<section id="about">
+    <h2>소개</h2>
+    <p>이 홈페이지는 HTML과 CSS로 만든 예제입니다.</p>
+</section>
 
-@enduml
+<section id="contact">
+    <h2>연락처</h2>
+    <p>이메일: example@example.com</p>
+</section>
+
+<footer>
+    <p>© 2026 나의 홈페이지</p>
+</footer>
+
+</body>
+</html>
