@@ -1,0 +1,23 @@
+@startuml
+actor Developer
+
+node "Local Dev Environment" {
+  component "Next.js App"
+}
+
+node "GitHub Repository" {
+  component "Source Code"
+}
+
+node "Vercel Platform" {
+  component "Build Server"
+  component "Edge Network CDN"
+}
+
+Developer --> "Next.js App" : Develop
+"Next.js App" --> "Source Code" : Push
+"Source Code" --> "Build Server" : Trigger CI
+"Build Server" --> "Edge Network CDN" : Deploy
+"Edge Network CDN" --> Visitor : Serve HTTPS
+
+@enduml
